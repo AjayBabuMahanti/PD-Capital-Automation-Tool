@@ -247,7 +247,7 @@ def process_single_file(input_file, portfolio_name):
                 if pd.isna(date_value):
                     date_value = ""
                 else:
-                    date_value = date_value.strftime('%Y-%m-%d')
+                    date_value = date_value.strftime('%m-%d-%Y')
             except:
                 date_value = str(date_value)
         else:
@@ -453,7 +453,7 @@ def main():
     )
     
     # Main header section
-    st.markdown('<h1 class="main-title">PD CAPITAL AUTOMATION TOOL</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-title">PD CAPITAL - PORT UPLOAD TOOL</h1>', unsafe_allow_html=True)
     st.markdown('<p class="subtitle">Upload Excel files and automate portfolio data processing with intelligent column mapping</p>', unsafe_allow_html=True)
     
     # Sidebar with comprehensive information
@@ -708,4 +708,5 @@ def main():
             """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
+
     main()
